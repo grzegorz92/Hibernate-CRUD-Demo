@@ -18,13 +18,12 @@ public class ReadCustomer implements Cstmr {
 	public void execute(SessionFactory factory) {
 		
 		
-		Session s = factory.getCurrentSession();		
-		s = factory.getCurrentSession();
+		Session s = factory.getCurrentSession();
 		s.beginTransaction();		
 		Customer customer = s.get(Customer.class, id);
 		
 		
-		// If customer is null (Customer doesn't exist) deleting won't be execute - Avoid NullPointerException
+		// If customer is null (Customer doesn't exist) reading won't be execute - Avoid NullPointerException
 		if(customer!=null) {
 		
 		System.out.println("Customer with ID "+id+" is: "+customer);
