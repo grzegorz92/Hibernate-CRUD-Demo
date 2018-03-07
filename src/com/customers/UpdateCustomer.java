@@ -18,13 +18,13 @@ public class UpdateCustomer implements Cstmr {
 	public void execute(SessionFactory factory) {
 
 		Session s = factory.getCurrentSession();
-		s = factory.getCurrentSession();
+		
 		s.beginTransaction();
 
 		Customer c = s.get(Customer.class, id);
 
 		
-		// If c is null (Customer doesn't exist) deleting won't be execute - Avoid NullPointerException
+		// If c is null (Customer doesn't exist) updating won't be execute - Avoid NullPointerException
 		if (c != null) {
 
 			System.out.println("Update Customer with ID: " + id + "\n Enter:  ");
