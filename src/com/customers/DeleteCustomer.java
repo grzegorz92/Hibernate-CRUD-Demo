@@ -20,8 +20,8 @@ public class DeleteCustomer implements Cstmr {
 	public void execute(SessionFactory factory) {
 		
 		
-		Session s = factory.getCurrentSession();		
-		s = factory.getCurrentSession();
+		Session s = factory.getCurrentSession();
+		
 		s.beginTransaction();
 		
 		Customer c = s.get(Customer.class, id);
