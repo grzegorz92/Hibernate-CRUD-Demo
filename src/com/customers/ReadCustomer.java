@@ -30,7 +30,7 @@ public class ReadCustomer implements Cstmr {
 		s.getTransaction().commit();
 		}else {
 			System.out.println("\n\nCustomer with ID "+id+" doesn't exist!");
-			s.getTransaction().commit(); // Must be here, otherwise if c==null Session is not closed, and next operation is not possible
+			s.getTransaction().commit(); // Must be here, otherwise if customer==null Session is not closed, and next operation is not possible
 		}
 			
 
